@@ -1,2 +1,2 @@
-export const APP_ID = "";
-export const API_TOKEN = "";
+export const APP_ID = "F1E02A53-DF8D-4EB0-8925-A2FC4FD2CEE8";
+export const API_TOKEN = "https://api-F1E02A53-DF8D-4EB0-8925-A2FC4FD2CEE8.sendbird.com";

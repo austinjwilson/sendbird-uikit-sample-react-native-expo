@@ -17,7 +17,7 @@ import {
   LightUIKitTheme,
 } from "@sendbird/uikit-react-native-foundation";
 
-// import LogView from './components/LogView';
+import LogView from './components/LogView';
 import { APP_ID } from "./env";
 import {
   ClipboardService,
@@ -132,16 +132,16 @@ const Navigations = () => {
       ref={navigationRef}
       theme={isLightTheme ? DefaultTheme : DarkTheme}
     >
-      {/*<LogView />*/}
-      <RootStack.Navigator screenOptions={{ headerShown: false }}>
+      {/* <LogView /> */}
+      {/* <RootStack.Navigator screenOptions={{ headerShown: false }}>
         {!currentUser ? (
           <RootStack.Screen name={Routes.SignIn} component={SignInScreen} />
         ) : (
           <>
-            <RootStack.Screen name={Routes.Home} component={HomeScreen} />
+            <RootStack.Screen name={Routes.Home} component={HomeScreen} /> */}
 
             {/** Group channels **/}
-            <RootStack.Group>
+            {/* <RootStack.Group>
               <RootStack.Screen
                 name={Routes.GroupChannelTabs}
                 component={GroupChannelTabs}
@@ -192,10 +192,10 @@ const Navigations = () => {
                 name={Routes.GroupChannelInvite}
                 component={GroupChannelInviteScreen}
               />
-            </RootStack.Group>
+            </RootStack.Group> */}
 
             {/** Open channels **/}
-            <RootStack.Group>
+            {/* <RootStack.Group>
               <RootStack.Screen
                 name={Routes.OpenChannelTabs}
                 component={OpenChannelTabs}
@@ -267,8 +267,89 @@ const Navigations = () => {
               />
             </RootStack.Group>
           </>
-        )}
+        )} */}
+        {/* <RootStack.Navigator>
+        <RootStack.Screen
+                name={Routes.GroupChannelTabs}
+                component={GroupChannelTabs}
+          />
+        <RootStack.Screen
+                name={Routes.GroupChannel}
+                component={GroupChannelScreen}
+        />
+        <RootStack.Screen
+                name={Routes.GroupChannelCreate}
+                component={GroupChannelCreateScreen}
+        />
+        <RootStack.Screen
+                name={Routes.GroupChannelInvite}
+                component={GroupChannelInviteScreen}
+        />
+        <RootStack.Screen 
+          name={Routes.GroupChannelSettings}
+          component={GroupChannelSettingsScreen}
+        />
+        <RootStack.Screen 
+          name={Routes.GroupChannelNotifications}
+          component={GroupChannelNotificationsScreen}
+        />
+      <RootStack.Screen 
+        name={Routes.GroupChannelModeration}
+        component={GroupChannelModerationScreen}
+        /> 
+      <RootStack.Screen 
+          name={Routes.GroupChannelBannedUsers}
+          component={GroupChannelBannedUsersScreen}
+        />
+      <RootStack.Screen 
+          name={Routes.GroupChannelMutedMembers}
+          component={GroupChannelMutedMembersScreen}
+        />
+      <RootStack.Screen 
+          name={Routes.GroupChannelOperators}
+          component={GroupChannelOperatorsScreen}
+        />
+      <RootStack.Screen 
+          name={Routes.GroupChannelRegisterOperator}
+          component={GroupChannelRegisterOperatorScreen}
+        />
+
+      </RootStack.Navigator> */}
+      <RootStack.Navigator>
+      <RootStack.Screen
+        name={Routes.OpenChannelTabs}
+        component={OpenChannelTabs}
+      />
+      {/* <RootStack.Screen
+        name={Routes.OpenChannel}
+        component={OpenChannelScreen}
+      /> */}
+      {/* <RootStack.Screen
+        name={Routes.OpenChannelLiveStream}
+        component={OpenChannelLiveStreamScreen}
+        /> */}
+        <RootStack.Screen
+                  name={Routes.OpenChannelSettings}
+                  component={OpenChannelSettingsScreen}
+        />
+        {/* <RootStack.Screen
+                name={Routes.OpenChannelParticipants}
+                component={OpenChannelParticipantsScreen}
+        /> */}
+         {/* <RootStack.Screen
+                name={Routes.OpenChannelCreate}
+                component={OpenChannelCreateScreen}
+        /> */}
+        <RootStack.Screen
+                  name={Routes.OpenChannelRegisterOperator}
+                  component={OpenChannelRegisterOperatorScreen}
+        />
+        <RootStack.Screen
+                  name={Routes.OpenChannelOperators}
+                  component={OpenChannelOperatorsScreen}
+                />
       </RootStack.Navigator>
+      {/* </RootStack.Navigator> */}
     </NavigationContainer>
   );
 };
